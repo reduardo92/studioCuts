@@ -1,0 +1,42 @@
+.hero {
+  position: relative;
+  background-image: url(../assets/img/heroInside.jpg));
+  background-position: right;
+  background-size: cover;
+  min-height: calc(95vh - 66px);
+  text-align: center;
+  margin: 4.6em 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: -1;
+  }
+}
+
+.hero--logo {
+  width: 300px;
+  margin-bottom: 2em;
+}
+
+// Large Laptops
+@include mediaLg {
+  .hero--logo {
+    width: 450px;
+    margin-bottom: 2em;
+  }
+
+  .hero--call {
+    font-size: 1.25rem;
+  }
+}

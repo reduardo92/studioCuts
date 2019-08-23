@@ -1,0 +1,24 @@
+$primary-color: #cccccc;
+$second-color: rgb(32, 33, 36);
+$third-color: #222;
+$fourth-color: #fff;
+$five-color: #ed3330;
+$gradient-bg: linear-gradient(
+  to left bottom,
+  #222222,
+  #232323,
+  #242424,
+  #252525,
+  #262626,
+  #262626,
+  #272727,
+  #272727,
+  #272727,
+  #282828,
+  #282828,
+  #292929
+);
+
+// $fourth-color: darken($primary-color, 23);
+
+$hover--color: #5d5e5e;

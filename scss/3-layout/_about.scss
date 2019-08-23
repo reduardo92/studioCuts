@@ -1,0 +1,73 @@
+.about {
+  text-align: justify;
+  &--subtitle {
+    padding: 0 1em;
+  }
+}
+
+.barber--pole {
+  display: none;
+}
+
+@include mediaMd {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    .sections--title {
+      grid-area: 1 / 1 / 1 /5;
+    }
+
+    &--subtitle {
+      grid-area: 2 / 3 / 2 / 5;
+    }
+
+    &--img {
+      grid-area: 2 / 1 / 2 / 3;
+      width: 350px;
+      justify-self: center;
+    }
+  }
+
+  .barber--pole {
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+  }
+}
+
+// Large Laptops
+@include mediaLg {
+  .about--subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about--img {
+    width: 400px;
+  }
+  .barber--pole {
+    width: 220px;
+    margin-top: 2em;
+  }
+}
+
+// Larger Laptops
+@include mediaLgTop {
+  .main--container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .about--subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about--img {
+    width: 450px;
+  }
+
+  .barber--pole {
+    width: 250px;
+    margin-top: 2em;
+  }
+}

@@ -1,0 +1,57 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials--cards {
+  display: grid;
+  grid-gap: 3em 2em;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+.testimonials--cards__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials--card__stars {
+  .fas {
+    color: yellow;
+    text-shadow: 0.4px 0.4px 0.4px black;
+  }
+}
+.testimonials--card__qoute {
+  margin: 1.2em 0;
+}
+
+.testimonials--card__reviewby {
+  font-family: $f-Bangers;
+  color: $five-color;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.testimonials--writereview {
+  margin-top: 2.5em;
+}
+
+// Large Laptops
+@include mediaLg {
+  .testimonials--card__stars {
+    .fas {
+      font-size: 1.1rem;
+    }
+  }
+
+  .testimonials--card__qoute {
+    font-size: 1.03rem;
+  }
+
+  .testimonials--card__reviewby {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: $f-OpenSans;
+  line-height: 1.8;
+  background-image: linear-gradient(
+    to bottom,
+    #f2f2f2,
+    #f3f3f3,
+    #f4f5f5,
+    #f5f6f6,
+    #f6f7f6,
+    #f6f7f7,
+    #f7f7f7,
+    #f7f7f7,
+    #f6f6f6,
+    #f6f6f6,
+    #f5f5f5,
+    #f4f4f4
+  );
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+// CopyRight
+.copyright {
+  color: $primary-color;
+  font-size: 0.6rem;
+  font-weight: 200;
+  // font-family: $f-Oswald;
+  letter-spacing: 1.5px;
+  padding: 2em 0 3em;
+}
+
+// font Awesome Icons global Styles
+.icon::before {
+  display: block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.8rem;
+  color: $primary-color;
+  padding: 0.35em;
+  width: 100%;
+  height: 100%;
+  text-shadow: 5px 0 30px black;
+}
+
+.sections {
+  margin: 3em 0.5em;
+}
+.sections--title {
+  position: relative;
+  text-align: center;
+  font-family: $f-Bangers;
+  font-size: 1.9rem;
+  letter-spacing: 1.5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 60px;
+    background-color: red;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: $third-color;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    background: $primary-color;
+    letter-spacing: 1.2px;
+    color: #000000;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
+  }
+}
+
+// FOOTER
+.footer {
+  text-align: center;
+  margin-bottom: 4.1em;
+  padding: 1em 0;
+  background-image: $gradient-bg;
+  &--logo {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .coded-by {
+    font-size: 0.8rem;
+    color: $primary-color;
+  }
+}
+
+// global mixins
+// Large Laptops
+@include mediaLgTop {
+  .main--container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .sections--title {
+    font-size: 2.6rem;
+
+    &::before {
+      height: 3px;
+      width: 60px;
+    }
+  }
+
+  .footer {
+    margin: 0;
+  }
+}

@@ -1,0 +1,73 @@
+// Phones
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+// tablets & sm lapops
+@mixin mediaMd {
+  @media screen and (min-width: 690px) {
+    @content;
+  }
+}
+
+// laptops
+@mixin mediaLg {
+  @media screen and (min-width: 1020px) {
+    @content;
+  }
+}
+
+// Large laptops
+@mixin mediaLgTop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+// XL larger Screens
+@mixin mediaXl {
+  @media screen and (min-width: 2100px) {
+    @content;
+  }
+}
+
+// Box Shadow one
+@mixin oneBoxShadow {
+  -webkit-box-shadow: -1px 4px 54px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 54px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 54px 1px rgba(0, 0, 0, 0.75);
+}
+
+// Transition one
+@mixin easeIn($trans: all 0.27s linear) {
+  transition: $trans;
+}
+
+// tranition two
+@mixin easeOut($trans: all 0.5s ease-in) {
+  transition: $trans;
+}
+
+// transition page Click opacity's
+@mixin fadeOpcity($trans: all 0.8s ease-in-out 0.7s) {
+  transition: $trans;
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  opacity: 0;
+}
+
+// Cards titles transform's
+@mixin scaleBefore($transF: scale(1, 0), $origin: top) {
+  transform: $transF;
+  transform-origin: $origin;
+  opacity: 0;
+}
+
+// set all cross browser animation
+@mixin allAnimationKits($animation: '') {
+  animation: $animation;
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+}
