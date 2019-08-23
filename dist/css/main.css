@@ -597,7 +597,7 @@ img {
 
 .hero {
   position: relative;
-  background-image: url(../../dist/assets/img/heroInside.jpg);
+  background-image: url(../assets/img/heroInside.jpg);
   background-position: right;
   background-size: cover;
   min-height: calc(95vh - 66px);
