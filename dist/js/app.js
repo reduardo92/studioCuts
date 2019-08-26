@@ -71,6 +71,6 @@ const modalToggle = document.addEventListener('click', e => {
 });
 
 // Form Button sumbmit
-const formBtn = document
-  .querySelector('.form--btn')
-  .addEventListener('click', e => e.preventDefault());
+// const formBtn = document
+//   .querySelector('.form--btn')
+//   .addEventListener('click', e => e.preventDefault());
