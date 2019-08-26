@@ -54,6 +54,13 @@
   &:focus .contact--para {
     color: $five-color;
   }
+
+  .qoute {
+    .fas,
+    .contact--para {
+      pointer-events: none;
+    }
+  }
 }
 
 .logo {
@@ -127,7 +134,6 @@
     }
 
     &:hover::before,
-    &:focus::before,
     &.activeNav::before {
       transform-origin: left;
       transform: scale(1) translateY(-3px);
@@ -135,7 +141,6 @@
     }
 
     &:hover,
-    &:focus,
     &.activeNav {
       color: $five-color;
       transform: scale(1.15);
@@ -182,6 +187,9 @@
 
 // Large Laptops
 @include mediaLg {
+  .header--nav {
+    box-shadow: none;
+  }
   .logo {
     width: 110px;
   }

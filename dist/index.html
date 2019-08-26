@@ -15,20 +15,20 @@
       <div class="head--container">
         <div class="header--nav__contacts">
           <div class="contact--icon">
-            <button>
+            <button class="qoute">
               <i class="fas fa-book"></i>
               <p class="contact--para">Quote</p>
             </button>
           </div>
           <div class="contact--icon">
-            <a href="tel:+17085815162" target="_blank">
+            <a href="tel:+17085815162">
               <i class="fas fa-phone-alt"></i>
               <p class="contact--para">Call</p>
             </a>
           </div>
           <div class="contact--icon">
             <a
-              href="https://www.google.com/maps?hl=en-US&gl=us&q=Studio+cuts+2,+7331+W+87th+St,+Bridgeview,+IL+60455&lsig=AB86z5VSI7eTxlUe9jkcw3b6hsOR&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjnxZK9jZfkAhUFR6wKHajvBk0Q_AUIESgB"
+              href="https://www.google.com/maps/place/Studio+cuts+2/@41.7330817,-87.8052035,16.75z/data=!4m5!3m4!1s0x880e39dbb14d805f:0xe3e4e4548a57f93f!8m2!3d41.733176!4d-87.803036?hl=en-US"
               target="_blank"
             >
               <i class="fas fa-directions"></i>
@@ -84,22 +84,17 @@
           masks. If you’re looking for a life changing look this is the shop for
           you. We’re flexible to your schedule, accepting walk-ins as well as
           appointments. Get your life changing look today.
-          <!-- <div class="barber--pole"> -->
           <img
             class="barber--pole"
             src="/dist/assets/img/barberPole.png"
             alt="barber pole"
           />
-          <!-- </div> -->
         </p>
         <img
           class="about--img"
           src="./assets//img/gallery/ownerAbout.jpg"
           alt="owener"
         />
-        <!-- <div class="barber--pole">
-          <img src="/dist/assets/img/barberPole.png" alt="barber pole" />
-        </div> -->
       </section>
       <!-- TESTIMONIALS -->
       <section id="testimonials" class="sections testimonials">
@@ -217,7 +212,7 @@
         </div>
         <a
           class="btn testimonials--writereview"
-          href="https://www.google.com/search?hl=en-US&gl=us&q=Studio+cuts+2,+7331+W+87th+St,+Bridgeview,+IL+60455&ludocid=16421501193049078079&lsig=AB86z5VSI7eTxlUe9jkcw3b6hsOR#lrd=0x880e39dbb14d805f:0xe3e4e4548a57f93f,3,,,"
+          href="https://www.google.com/search?source=hp&ei=9GdhXfeLN4P2swWYkrbYAQ&q=studio+cuts+2&oq=studio+cuts+2&gs_l=psy-ab.3..35i39j0l2j0i22i30j38.989.3933..4214...0.0..0.132.436.1j3....2..0....1..gws-wiz.......0i67j0i131.Iz5k2KpMpFI&ved=0ahUKEwj31YLk-JvkAhUD-6wKHRiJDRsQ4dUDCAc&uact=5#lrd=0x880e39dbb14d805f:0xe3e4e4548a57f93f,3,,,"
           target="_blank"
           >WRITE A REVIEW</a
         >
@@ -292,21 +287,22 @@
       <section id="contact" class="sections contact">
         <h2 class="sections--title">CONTACT</h2>
         <div class="contact--location">
-          <img src="./assets/img/location.jpg" alt="location" />
+          <a
+            href="https://www.google.com/maps/place/Studio+cuts+2/@41.7330817,-87.8052035,16.75z/data=!4m5!3m4!1s0x880e39dbb14d805f:0xe3e4e4548a57f93f!8m2!3d41.733176!4d-87.803036?hl=en-US"
+            target="_blank"
+          >
+            <img src="./assets/img/location.jpg" alt="location" />
+          </a>
         </div>
         <div class="contact--icon contact--one">
-          <a
-            href="tel:+17085815162"
-            target="_blank"
-            class="fas fa-phone-alt"
-          ></a>
+          <a href="tel:+17085815162" class="fas fa-phone-alt"></a>
           <p class="contact--icon--para">
             (708)581-5162
           </p>
         </div>
         <div class="contact--icon contact--two">
           <a
-            href="https://www.google.com/maps?hl=en-US&gl=us&q=Studio+cuts+2,+7331+W+87th+St,+Bridgeview,+IL+60455&lsig=AB86z5VSI7eTxlUe9jkcw3b6hsOR&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjnxZK9jZfkAhUFR6wKHajvBk0Q_AUIESgB"
+            href="https://www.google.com/maps/place/Studio+cuts+2/@41.7330817,-87.8052035,16.75z/data=!4m5!3m4!1s0x880e39dbb14d805f:0xe3e4e4548a57f93f!8m2!3d41.733176!4d-87.803036?hl=en-US"
             target="_blank"
             class="fas fa-address-card"
           ></a>
@@ -350,6 +346,50 @@
         </div>
       </section>
     </main>
+
+    <!-- Modal -->
+    <div class="form--modal">
+      <form class="form" name="quote" method="POST" data-netlify="true">
+        <div class="form--head">
+          <h2>Get Quote</h2>
+          <i class="fas fa-times form--x"></i>
+        </div>
+        <input
+          class="form--input"
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Name"
+        />
+        <input
+          class="form--input"
+          id="phone"
+          type="text"
+          name="phone"
+          min="9"
+          max="9"
+          placeholder="Phone number"
+        />
+        <input
+          class="form--input"
+          id="email"
+          type="text"
+          name="name"
+          placeholder="Email *"
+          required
+        />
+        <textarea
+          name="message"
+          class="form--input"
+          id="message"
+          cols="30"
+          rows="5"
+          placeholder="I was wondering about availability and rates. I need help with the following"
+        ></textarea>
+        <button type="submit" class="form--btn btn">SUBMIT</button>
+      </form>
+    </div>
+
     <!-- FOOTER -->
     <footer class="footer">
       <img class="footer--logo" src="./assets/img/logo.png" alt="logo" />
